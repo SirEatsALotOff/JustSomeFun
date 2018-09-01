@@ -1,1 +1,4 @@
 hello dear :)
+shutoffdisplay     -     turns off the resources display
+logout             -     sends you to start and turns off resource display
+startDisplay       -     turns on resource display

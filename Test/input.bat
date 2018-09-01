@@ -45,22 +45,22 @@ set /p "passwordTest= New Password?   "
 
 echo %passwordTest%>accounts\%newUser%.txt
 mkdir accounts\%newUser%Resources\mood
-echo.>accounts\%newUser%Resources\mood\happiness.txt
-echo.>accounts\%newUser%Resources\mood\health.txt
-echo.>accounts\%newUser%Resources\mood\hostility.txt
-echo.>accounts\%newUser%Resources\mood\intelligence.txt
+echo 0 >accounts\%newUser%Resources\mood\happiness.txt
+echo 0 >accounts\%newUser%Resources\mood\health.txt
+echo 0 >accounts\%newUser%Resources\mood\hostility.txt
+echo 0 >accounts\%newUser%Resources\mood\intelligence.txt
 mkdir accounts\%newUser%Resources\realResource
 mkdir accounts\%newUser%Resources\structures
-echo.>accounts\%newUser%Resources\realResource\food.txt
-echo.>accounts\%newUser%Resources\realResource\steel.txt
-echo.>accounts\%newUser%Resources\realResource\stone.txt
-echo.>accounts\%newUser%Resources\realResource\wood.txt
-echo.>accounts\%newUser%Resources\structures\huts.txt
-echo.>accounts\%newUser%Resources\structures\hovels.txt
-echo.>accounts\%newUser%Resources\structures\house.txt
-echo.>accounts\%newUser%Resources\structures\ranchHouse.txt
-echo.>accounts\%newUser%Resources\structures\mansion.txt
-echo.>accounts\%newUser%Resources\structures\castle.txt
+echo 0 >accounts\%newUser%Resources\realResource\food.txt
+echo 0 >accounts\%newUser%Resources\realResource\steel.txt
+echo 0 >accounts\%newUser%Resources\realResource\stone.txt
+echo 0 >accounts\%newUser%Resources\realResource\wood.txt
+echo 0 >accounts\%newUser%Resources\structures\huts.txt
+echo 0 >accounts\%newUser%Resources\structures\hovels.txt
+echo 0 >accounts\%newUser%Resources\structures\house.txt
+echo 0 >accounts\%newUser%Resources\structures\ranchHouse.txt
+echo 0 >accounts\%newUser%Resources\structures\mansion.txt
+echo 0 >accounts\%newUser%Resources\structures\castle.txt
 set username=%newUser%
 pause
 goto success

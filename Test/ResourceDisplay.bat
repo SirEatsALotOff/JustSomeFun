@@ -1,6 +1,8 @@
 @echo off
 cls
+title Resource Display
 :loop
+mode con: cols=20 lines=25
 ::break>file.txt clears files my dude
 set /p happy=<accounts\%1Resources\mood\happiness.txt
 set /p health=<accounts\%1Resources\mood\health.txt
@@ -17,17 +19,20 @@ set /p hovels=<accounts\%1Resources\structures\hovels.txt
 set /p house=<accounts\%1Resources\structures\house.txt
 set /p ranchHouse=<accounts\%1Resources\structures\ranchHouse.txt
 set /p mansion=<accounts\%1Resources\structures\mansion.txt
-set /p caslte=<accounts\%1Resources\structures\castle.txt
+set /p castle=<accounts\%1Resources\structures\castle.txt
 
 ::insert bars here
+echo .....MOOD.....
 echo %happy% happiness
 echo %health% health
 echo %hostility% hostility
 echo %intelligence% intelligence
+echo ...RESOURCE...
 echo %food% food
 echo %steel% steel
 echo %stone% stone
 echo %wood% wood
+echo ...STRUCTURE...
 echo %huts% huts
 echo %hovels% hovels
 echo %house% house

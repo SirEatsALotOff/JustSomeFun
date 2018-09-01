@@ -39,20 +39,17 @@ echo Error detected. Please use only valid characters and no spaces.
 :newAccountConfirm
 set /p "newUser= New Username?   "
 For %%a in (%check%) Do (
-if not !test:%%~a=X!==!test! goto :newAccountConfirm
+if not !newUser:%%~a=X!==!newUser! goto :newAccountConfirmError
 )
 set /p "passwordTest= New Password?   "
 For %%a in (%check%) Do (
-if not !test:%%~a=X!==!test! goto :newAccountConfirmError
+if not !passwordTest:%%~a=X!==!passwordTest! goto :newAccountConfirmError
 )
 echo %passwordTest%>accounts\%newUser%.txt
 goto success
 :success
 cls
 echo Signed in successfully
-
-
-
 
 pause
 

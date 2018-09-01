@@ -35,4 +35,5 @@ echo %ranchHouse% ranch house
 echo %mansion% mansion
 echo %castle% castle
 PING localhost -n 6 >NUL
+cls
 goto loop

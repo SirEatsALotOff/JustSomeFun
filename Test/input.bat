@@ -1,4 +1,5 @@
 @echo off
+
 cls
 (set check="£" "^^" "&" "$" "%%" "(" ")" "_" "-" "+" "^~" "|" "\" "<" "." ";" "@" "'" "^~" "#" "{" "}" "[" "]")
 setlocal enabledelayedexpansion
@@ -48,21 +49,28 @@ echo.>accounts\%newUser%Resources\mood\happiness.txt
 echo.>accounts\%newUser%Resources\mood\health.txt
 echo.>accounts\%newUser%Resources\mood\hostility.txt
 echo.>accounts\%newUser%Resources\mood\intelligence.txt
-echo.>accounts\%newUser%Resources\mood\happiness.txt
 mkdir accounts\%newUser%Resources\realResource
 mkdir accounts\%newUser%Resources\structures
-
+echo.>accounts\%newUser%Resources\realResource\food.txt
+echo.>accounts\%newUser%Resources\realResource\steel.txt
+echo.>accounts\%newUser%Resources\realResource\stone.txt
+echo.>accounts\%newUser%Resources\realResource\wood.txt
+echo.>accounts\%newUser%Resources\structures\huts.txt
+echo.>accounts\%newUser%Resources\structures\hovels.txt
+echo.>accounts\%newUser%Resources\structures\house.txt
+echo.>accounts\%newUser%Resources\structures\ranchHouse.txt
+echo.>accounts\%newUser%Resources\structures\mansion.txt
+echo.>accounts\%newUser%Resources\structures\castle.txt
+set username=%newUser%
 pause
 goto success
-
 :success
-
 cls
 echo Signed in successfully
 echo.
 echo Opening external displays...
 echo Feel free to organize them as you like.
 echo.
+start ResourceDisplay.bat %username% %cd%
 
-pause
 

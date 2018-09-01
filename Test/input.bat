@@ -37,21 +37,32 @@ goto start
 cls
 echo Error detected. Please use only valid characters and no spaces.
 :newAccountConfirm
+@echo on
 set /p "newUser= New Username?   "
-For %%a in (%check%) Do (
-if not !newUser:%%~a=X!==!newUser! goto :newAccountConfirmError
-)
+
 set /p "passwordTest= New Password?   "
-For %%a in (%check%) Do (
-if not !passwordTest:%%~a=X!==!passwordTest! goto :newAccountConfirmError
-)
+
 echo %passwordTest%>accounts\%newUser%.txt
-goto success
-:success
-cls
-echo Signed in successfully
+mkdir accounts\%newUser%Resources\mood
+echo.>accounts\%newUser%Resources\mood\happiness.txt
+echo.>accounts\%newUser%Resources\mood\health.txt
+echo.>accounts\%newUser%Resources\mood\hostility.txt
+echo.>accounts\%newUser%Resources\mood\intelligence.txt
+echo.>accounts\%newUser%Resources\mood\happiness.txt
+mkdir accounts\%newUser%Resources\realResource
+mkdir accounts\%newUser%Resources\structures
 
 pause
+goto success
 
+:success
 
+cls
+echo Signed in successfully
+echo.
+echo Opening external displays...
+echo Feel free to organize them as you like.
+echo.
+
+pause
 

@@ -22,7 +22,7 @@ set /p house=<accounts\%1Resources\structures\house.txt
 set /p ranchHouse=<accounts\%1Resources\structures\ranchHouse.txt
 set /p mansion=<accounts\%1Resources\structures\mansion.txt
 set /p castle=<accounts\%1Resources\structures\castle.txt
-
+::all values act as percentages.
 ::insert bars here
 echo .....MOOD.....
 echo %happy% happiness

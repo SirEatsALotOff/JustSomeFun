@@ -38,7 +38,6 @@ goto start
 cls
 echo Error detected. Please use only valid characters and no spaces.
 :newAccountConfirm
-@echo on
 set /p "newUser= New Username?   "
 
 set /p "passwordTest= New Password?   "
@@ -72,5 +71,13 @@ echo Opening external displays...
 echo Feel free to organize them as you like.
 echo.
 start ResourceDisplay.bat %username% %cd%
+cls
+:commandloop
+cls
+set /p "inputBox= Command (type help for a list of commands)   "
+if "%inputBox%"=="help" (
+type data\help.txt
+pause
+)
 
-
+goto commandloop

@@ -3,7 +3,7 @@ cls
 title Resource Display
 mode con: cols=20 lines=25
 :loop
-set /p shutdownyesno=<data\command.txt
+set /p shutdownyesno=<accounts\%username%Resources\command.txt
 if "%shutdownyesno%"=="shutoffdisplay" exit
 ::break>file.txt clears files my dude
 set /p happy=<accounts\%1Resources\mood\happiness.txt

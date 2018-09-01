@@ -7,7 +7,6 @@ set "passwordTest="
 set "username="
 set "password="
 set "newUser="
-echo nothingtoseehere>data\command.txt
 echo Enter an existing username, or leave blank to create a new account.
 set /p "username=account name?   "
 if exist accounts\%username%.txt goto next
@@ -57,10 +56,11 @@ echo 0 >accounts\%newUser%Resources\structures\house.txt
 echo 0 >accounts\%newUser%Resources\structures\ranchHouse.txt
 echo 0 >accounts\%newUser%Resources\structures\mansion.txt
 echo 0 >accounts\%newUser%Resources\structures\castle.txt
-set username=%newUser%
+set "username=%newUser%"
 pause
 goto success
 :success
+echo nothingtoseehere>accounts\%username%Resources\command.txt
 cls
 echo Signed in successfully
 echo.
@@ -68,6 +68,7 @@ echo Opening external displays...
 echo Feel free to organize them as you like.
 echo.
 start ResourceDisplay.bat %username%
+start events.bat %username%
 cls
 :commandloop
 cls
@@ -81,10 +82,10 @@ pause
 goto commandloop
 )
 if "%inputBox%"=="logout" (
-echo shutoffdisplay>data\command.txt
+echo shutoffdisplay>accounts\%username%Resources\command.txt
 goto start
 
 )
 if "%inputBox%"=="startDisplay" (start ResourceDisplay.bat %username%)
-echo %inputBox%>data\command.txt
+echo %inputBox%>accounts\%username%Resources\command.txt
 goto commandloop

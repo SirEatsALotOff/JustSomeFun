@@ -1,7 +1,5 @@
 @echo off
-
 cls
-(set check="£" "^^" "&" "$" "%%" "(" ")" "_" "-" "+" "^~" "|" "\" "<" "." ";" "@" "'" "^~" "#" "{" "}" "[" "]")
 setlocal enabledelayedexpansion
 :start
 set confirmNewAccount=0
@@ -9,6 +7,7 @@ set "passwordTest="
 set "username="
 set "password="
 set "newUser="
+echo nothingtoseehere>data\command.txt
 echo Enter an existing username, or leave blank to create a new account.
 set /p "username=account name?   "
 if exist accounts\%username%.txt goto next
@@ -83,6 +82,11 @@ echo.
 pause
 goto commandloop
 )
+if "%inputBox%"=="logout" (
+echo shutoffdisplay>data\command.txt
+goto start
 
-echo %inputBox% >data\command.txt
+)
+if "%inputBox%"=="startDisplay" (start ResourceDisplay.bat %username%)
+echo %inputBox%>data\command.txt
 goto commandloop

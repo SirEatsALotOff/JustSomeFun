@@ -1,8 +1,10 @@
 @echo off
 cls
 title Resource Display
-:loop
 mode con: cols=20 lines=25
+:loop
+set /p shutdownyesno=<data\command.txt
+if "%shutdownyesno%"=="shutoffdisplay" exit
 ::break>file.txt clears files my dude
 set /p happy=<accounts\%1Resources\mood\happiness.txt
 set /p health=<accounts\%1Resources\mood\health.txt

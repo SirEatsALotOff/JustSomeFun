@@ -74,10 +74,15 @@ start ResourceDisplay.bat %username% %cd%
 cls
 :commandloop
 cls
+mode con: cols=90 lines=15
+set inputBox=0
 set /p "inputBox= Command (type help for a list of commands)   "
 if "%inputBox%"=="help" (
 type data\help.txt
+echo.
 pause
+goto commandloop
 )
 
+echo %inputBox% >data\command.txt
 goto commandloop

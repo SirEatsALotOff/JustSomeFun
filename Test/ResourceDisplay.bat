@@ -3,7 +3,7 @@ cls
 title Resource Display
 mode con: cols=20 lines=25
 :loop
-set /p shutdownyesno=<data\command.txt
+set /p shutdownyesno=<accounts\%username%Resources\command.txt
 if "%shutdownyesno%"=="shutoffdisplay" exit
 ::break>file.txt clears files my dude
 set /p happy=<accounts\%1Resources\mood\happiness.txt
@@ -22,7 +22,7 @@ set /p house=<accounts\%1Resources\structures\house.txt
 set /p ranchHouse=<accounts\%1Resources\structures\ranchHouse.txt
 set /p mansion=<accounts\%1Resources\structures\mansion.txt
 set /p castle=<accounts\%1Resources\structures\castle.txt
-
+::all values act as percentages.
 ::insert bars here
 echo .....MOOD.....
 echo %happy% happiness

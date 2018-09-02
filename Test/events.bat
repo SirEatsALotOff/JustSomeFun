@@ -3,9 +3,9 @@ setlocal enabledelayedexpansion
 
 :loop
 echo.
-type data\log.txt
+type accounts\%username%Resources\log.txt
 echo.
-set /p comm=<data\command.txt
+set /p comm=<accounts\%username%Resources\command.txt
 echo This will display current events.
 set "line1=%comm%"
 

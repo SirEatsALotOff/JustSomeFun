@@ -36,7 +36,6 @@ goto start
 cls
 echo Error detected. Please use only valid characters and no spaces.
 :newAccountConfirm
-@echo on
 set /p "newUser= New Username?   "
 set /p "passwordTest= New Password?   "
 echo %passwordTest%>accounts\%newUser%.txt
@@ -47,9 +46,8 @@ echo 0 >accounts\%newUser%Resources\mood\hostility.txt
 echo 0 >accounts\%newUser%Resources\mood\intelligence.txt
 mkdir accounts\%newUser%Resources\realResource
 mkdir accounts\%newUser%Resources\structures
-
-echo nothingtoseehere >accounts\%newUser%Resources\command.txt
-echo Herebedragons >accounts\%newUser%Resources\log.txt
+echo nothingtoseehere >accounts\%username%Resources\command.txt
+echo Here be dragons >accounts\%username%Resources\command.txt
 echo 0 >accounts\%newUser%Resources\realResource\food.txt
 echo 0 >accounts\%newUser%Resources\realResource\steel.txt
 echo 0 >accounts\%newUser%Resources\realResource\stone.txt
